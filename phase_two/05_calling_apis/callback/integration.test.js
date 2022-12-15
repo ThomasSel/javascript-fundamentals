@@ -1,7 +1,7 @@
 const GithubClient = require('./githubClient');
 const Github = require('./github');
 
-describe('Github integration', () => {
+describe('Github promise integration', () => {
   it('fetches the correct repo data', (done) => {
     const client = new GithubClient();
     const github = new Github(client);
