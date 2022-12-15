@@ -4,9 +4,10 @@ class Github {
     this.repoData = {};
   }
 
-  fetch(urlSuffix) {
+  fetch(urlSuffix, callback = () => {}) {
     this.client.fetchRepositoryData(urlSuffix, (object) => {
       this.repoData = object;
+      callback();
     });
   }
 
